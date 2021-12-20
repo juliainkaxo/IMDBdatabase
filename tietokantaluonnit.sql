@@ -32,12 +32,12 @@ CREATE INDEX title_id ON had_role (title_id);
 
 
     -- LUO HAUSSA TARVITTAVAN GETROLES NÄKYMÄN
-
 CREATE VIEW getrolesbyactor
 AS
-SELECT title_id, names_.name_id, name_, role_ 
+SELECT had_role.title_id, names_.name_id, name_, role_, type
 FROM names_ INNER JOIN had_role
-ON names_.name_id = had_role.name_id
+ON names_.name_id = had_role.name_id 
+INNER JOIN alias_types ON had_role.title_id = alias_types.title_id
 
 
     -- LUO GENRE NÄKYMÄN 

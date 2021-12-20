@@ -57,7 +57,7 @@ $html .= '</form>';
 echo $html;
 
 
-// Hakee yhden valitun näyttelijän roolin sekä sen, mihin kyseiseen genreen roolin elokuva sisältyy. 
+// Hakee yhden valitun näyttelijän roolin sekä sen, mihin kyseiseen genreen roolin elokuva sisältyy, sekä display tiedon. 
 
 require_once('utilities.php');
 // Hakukriteerit

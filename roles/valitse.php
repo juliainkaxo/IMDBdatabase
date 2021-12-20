@@ -8,7 +8,7 @@ $name_ = $_GET['name_'];
 $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbConnection()-funktiota, joka avaa tietokantayhteden
 
 // Muodosta SQL-lause muuttujaan. Tässä vaiheessa tätä ei vielä ajeta kantaan.
-$sql = "SELECT role_, genre
+$sql = "SELECT role_, genre, type
     FROM getrolesbyactor INNER JOIN genret
     ON
     getrolesbyactor.title_id = genret.title_id
@@ -33,7 +33,7 @@ $html .= '<ul>';
 foreach ($rows as $row) {
 
     // Tulosta jokaiselle riville li-elementti
-    $html .= '<li>' . 'Has played a role ' . $row['role_'] . 'in a ' . $row['genre'] . '</li>';
+    $html .= '<li>' . 'Has played a role ' . $row['role_'] . 'in a ' . $row['genre'] . 'and the type of the display is ' . $row['type'] . '</li>';
 }
 
 $html .= '</ul>';
