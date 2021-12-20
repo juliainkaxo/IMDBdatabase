@@ -2,7 +2,7 @@
 
 // Muodosta tietokantayhteys
 require_once('../db.php');
-// Lue region get-parametri muuttujaan
+// Lue genre get-parametri muuttujaan
 $genre = $_GET['genre'];
 $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbConnection()-funktiota, joka avaa tietokantayhteden
 

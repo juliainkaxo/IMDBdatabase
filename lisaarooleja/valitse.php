@@ -3,7 +3,7 @@
 // Muodosta tietokantayhteys
 require_once('../db.php');
 
-// Lue role get-parametri muuttujaan
+// Lue name_ get-parametri muuttujaan
 $name_ = $_GET['name_'];
 $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbConnection()-funktiota, joka avaa tietokantayhteden
 
@@ -11,7 +11,7 @@ $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbCo
 $sql = "SELECT role_
     FROM getrolesbynayttelija
     WHERE name_ LIKE '%$name_%'
-    LIMIT 10;";
+    LIMIT 1;";
 
 // Tarkistukset yms
 // Aja kysely kantaan

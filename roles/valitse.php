@@ -3,7 +3,7 @@
 // Muodosta tietokantayhteys
 require_once('../db.php');
 
-// Lue role get-parametri muuttujaan
+// Lue name_ get-parametri muuttujaan
 $name_ = $_GET['name_'];
 $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbConnection()-funktiota, joka avaa tietokantayhteden
 
