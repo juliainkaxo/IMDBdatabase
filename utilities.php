@@ -95,7 +95,7 @@ function createActorsDropDown()
 
     // Muodosta SQL-lause muuttujaan.
     $sql = "SELECT DISTINCT name_
-    FROM getrolesbynayttelija
+    FROM getrolesbyactor
     LIMIT 100;";
 
     // Aja kysely kantaan

@@ -9,7 +9,7 @@ $dbcon = createDbConnection(); // Kutsutaan db.php-tiedostossa olevaa createDbCo
 
 // Muodosta SQL-lause muuttujaan. Tässä vaiheessa tätä ei vielä ajeta kantaan.
 $sql = "SELECT role_
-    FROM getrolesbynayttelija
+    FROM getrolesbyactor
     WHERE name_ LIKE '%$name_%'
     LIMIT 1;";
 
